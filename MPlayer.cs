@@ -4523,7 +4523,7 @@ namespace RPG
                         Vector2 vel = Main.MouseWorld - proj.Center;
                         vel.Normalize();
                         vel *= speed;
-                        int scaledDamage = (int)(damage * (.2+(player.minionDamage-1)));
+                        int scaledDamage = (int)(damage * (.3+(player.minionDamage-1)/2));
                         int p = Projectile.NewProjectile(proj.Center.X, proj.Center.Y, vel.X, vel.Y, type, scaledDamage, knockBack / 2, proj.owner);
                         Main.projectile[p].noDropItem = true;
                         count++;
